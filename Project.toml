@@ -1,0 +1,14 @@
+name = "DontMaterialize"
+uuid = "5f58fed1-7d9e-412e-9290-962e4cbf8d80"
+authors = ["Mason Protter <mason.protter@icloud.com>"]
+version = "0.1.0"
+
+[weakdeps]
+Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
+
+[extensions]
+MarkdownExt = "Markdown"
+
+[compat]
+Markdown = "1.0"
+julia = "1.10"
