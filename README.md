@@ -68,8 +68,7 @@ julia> materialize(ans)
 * For an explanation of the ideas and motivation behind broadcast in julia, see https://julialang.org/blog/2017/01/moredots/
 * For documentation on broadcast see https://docs.julialang.org/en/v1/manual/arrays/#Broadcasting and https://docs.julialang.org/en/v1/manual/interfaces/#man-interfaces-broadcasting
 * For a heavier but more featureful package enabling the lazy usage of broadcast, see [LazyArrays.jl](https://github.com/JuliaArrays/LazyArrays.jl)
-* For a similarly light package focused around lazy broadcast, see [LazyBroadcast.jl](https://github.com/CliMA/LazyBroadcast.jl). This uses a macro rather than a function to make broadcast expressions lazy, and it is not always equivalent to regular broadcast semantics.
-  * e.g. `LazyBroadcast.@lazy x .= y` will return `Broadcasted(identity, (y,))` without mutating `x`, whereas `DontMaterialize.lazy.(x .= y)` will just return `x` after having mutated it (the `lazy.` function cannot intercept the `.=` expression). In this respect, DontMaterialize.jl is more similar to LazyArrays.jl which will do the same thing.
+* For a similarly light package focused around lazy broadcast, see [LazyBroadcast.jl](https://github.com/CliMA/LazyBroadcast.jl), which uses the same mechanism as DontMaterialize.jl
 
 ### Credit:
 
